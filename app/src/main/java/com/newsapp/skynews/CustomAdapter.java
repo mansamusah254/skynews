@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.newsapp.skynews.Models.NewsHeadlines;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -32,10 +33,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
         holder.text_title.setText(headlines.get(position).getTitle());
         holder.text_source.setText(headlines.get(position).getSource().getName());
 
+        if (headlines.get(position).getUrlToImage()!=null){
+            Picasso.get().load(headlines.get(position).getUrlToImage()).into(holder.img_headline);
+        }
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return headlines.size();
     }
 }
