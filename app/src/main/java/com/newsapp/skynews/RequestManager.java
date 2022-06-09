@@ -7,6 +7,7 @@ import com.newsapp.skynews.Models.NewsApiResponse;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public class RequestManager {
@@ -17,11 +18,14 @@ public class RequestManager {
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
+
+
     public RequestManager(Context context) {
         this.context = context;
     }
 
     public interface CallNewsApi {
+        @GET("top-headlines")
         Call<NewsApiResponse> callHeadlines(
                 @Query("country") String country,
                 @Query("category") String category,
