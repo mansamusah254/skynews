@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                dialog.setTitle("Fetching article" + query);
+                dialog.setTitle("Fetching article"  +  query);
                 dialog.show();
                 RequestManager manager = new RequestManager(MainActivity.this);
                 manager.getNewsHeadlines(listener, "general",query);
