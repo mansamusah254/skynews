@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.newsapp.skynews.Models.NewsApiResponse;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener{
 
     @Override
     public void OnNewsClicked(NewsHeadlines headlines) {
-
+        startActivity(new Intent(MainActivity.this, DetailsActivity.class)
+                .putExtra("data", headlines));
     }
 }
