@@ -29,7 +29,7 @@ private Button Favourite;
         Favourite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DetailsActivity.this, LogIn.class);
+                Intent intent = new Intent(DetailsActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

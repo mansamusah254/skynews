@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SkyNews Sign Up"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="239dp"
-        tools:layout_editor_absoluteY="13dp" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -110,7 +100,7 @@
         android:textSize="30dp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="27dp"
         tools:layout_editor_absoluteY="40dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
