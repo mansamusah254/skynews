@@ -76,6 +76,15 @@
                 android:layout_height="wrap_content">
 
             </TextView>
+            <Button
+                android:id="@+id/favourite"
+                android:text="Favourite"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_margin="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
         </LinearLayout>
     </ScrollView>
 

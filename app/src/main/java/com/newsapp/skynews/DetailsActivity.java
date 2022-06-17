@@ -2,10 +2,14 @@ package com.newsapp.skynews;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.FirebaseDatabase;
 import com.newsapp.skynews.Models.NewsHeadlines;
 import com.squareup.picasso.Picasso;
 
@@ -13,10 +17,22 @@ public class DetailsActivity extends AppCompatActivity {
 NewsHeadlines headlines;
 TextView txt_title, txt_author, txt_time, txt_detail, txt_content;
 ImageView img_news;
+FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+private Button Favourite;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
+        Favourite = findViewById (R.id.favourite);
+        Favourite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailsActivity.this, LogIn.class);
+                startActivity(intent);
+            }
+        });
 
         txt_title = findViewById(R.id.text_detail_title);
         txt_author = findViewById(R.id.text_detail_author);
@@ -33,5 +49,6 @@ ImageView img_news;
         txt_detail.setText(headlines.getDescription());
         txt_content.setText(headlines.getContent());
         Picasso.get().load(headlines.getUrlToImage()).into(img_news);
+
     }
 }
