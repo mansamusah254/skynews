@@ -31,14 +31,14 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Favourite = findViewById (R.id.favourite);
-        Favourite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
+//        Favourite = findViewById (R.id.favourite);
+//        Favourite.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         searchView = findViewById(R.id.search_view);
