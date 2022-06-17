@@ -86,16 +86,27 @@
         app:cardElevation="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view"
+            android:layout_width="222dp"
+            android:layout_height="?attr/actionBarSize"
             app:defaultQueryHint="Search News..."
-            app:iconifiedByDefault="false"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
-
+            app:iconifiedByDefault="false">
         </androidx.appcompat.widget.SearchView>
 
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/favourite"
+        android:text="Create an Account"
+        android:textSize="12sp"
+        android:padding="6dp"
+        android:layout_margin="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_main"
