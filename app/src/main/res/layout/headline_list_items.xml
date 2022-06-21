@@ -41,6 +41,9 @@
                 android:layout_height="wrap_content">
 
             </TextView>
+
+
+
         </LinearLayout>
         <ImageView
             android:id="@+id/img_headline"
