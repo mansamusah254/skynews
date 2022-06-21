@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.FirebaseDatabase;
 import com.newsapp.skynews.Models.NewsHeadlines;
@@ -40,5 +41,14 @@ FirebaseDatabase database = FirebaseDatabase.getInstance();
         txt_content.setText(headlines.getContent());
         Picasso.get().load(headlines.getUrlToImage()).into(img_news);
 
+    }
+
+
+    public void onDefaultToggleClick(View view) {
+        Toast.makeText(this, "Like", Toast.LENGTH_LONG).show();
+    }
+
+    public void onCustomToggleClick(View view) {
+        Toast.makeText(this, "Like", Toast.LENGTH_LONG).show();
     }
 }
