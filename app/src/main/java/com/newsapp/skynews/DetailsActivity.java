@@ -43,7 +43,6 @@ FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     }
 
-
     public void onDefaultToggleClick(View view) {
         Toast.makeText(this, "Like", Toast.LENGTH_LONG).show();
     }
