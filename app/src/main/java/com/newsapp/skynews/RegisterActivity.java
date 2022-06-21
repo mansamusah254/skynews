@@ -32,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private FirebaseAuth mAuthenticate;
 
-    private FirebaseAuth.AuthStateListener mAuthenticateListiner;
+    private FirebaseAuth.AuthStateListener mAuthenticateListener;
 
     @BindView(R.id.createUserButton) Button mCreateUserButton;
     @BindView(R.id.nameEditText) EditText mNameEditText;
@@ -60,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void createAuthStateListeners() {
-        mAuthenticateListiner = new FirebaseAuth.AuthStateListener() {
+        mAuthenticateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -173,13 +173,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onStart(){
         super.onStart();
-        mAuthenticate.addAuthStateListener(mAuthenticateListiner);
+        mAuthenticate.addAuthStateListener(mAuthenticateListener);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mAuthenticate.removeAuthStateListener(mAuthenticateListiner);
+        mAuthenticate.removeAuthStateListener(mAuthenticateListener);
     }
 }
 
