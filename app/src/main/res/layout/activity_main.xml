@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <HorizontalScrollView
         android:layout_margin="6dp"
         android:layout_width="match_parent"
@@ -76,17 +77,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             </Button>
-
         </LinearLayout>
 
     </HorizontalScrollView>
-
     <androidx.cardview.widget.CardView
         android:layout_margin="14dp"
         app:cardElevation="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view"
@@ -97,7 +95,6 @@
         </androidx.appcompat.widget.SearchView>
 
     </androidx.cardview.widget.CardView>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_main"
