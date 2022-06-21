@@ -105,7 +105,8 @@
         android:padding="6dp"
         android:text="Join Us"
         android:textAlignment="center"
-        android:textSize="12sp"></Button>
+        android:onClick="tapToFade"
+        android:textSize="12sp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_main"

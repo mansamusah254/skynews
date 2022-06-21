@@ -9,6 +9,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -127,5 +129,11 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         dialog.show();
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, category,null);
+    }
+
+    public void tapToFade(View view) {
+        Button button = (Button) findViewById(R.id.joinButton);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade);
+        button.startAnimation(animation);
     }
 }
